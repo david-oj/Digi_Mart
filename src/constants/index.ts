@@ -197,6 +197,27 @@ export const deals = [
   },
 ];
 
+export const customerReviews = [
+  {
+    name: "Sarah Williams",
+    image: customer1,
+    text: "I was skeptical about a multi-vendor platform, but MultiMart exceeded my expectations. The variety of products and vendors is impressive, and the shipping was faster than expected!",
+    rating: 5,
+  },
+  {
+    name: "Oreofe John",
+    image: customer2,
+    text: "Great selection of premium fashion brands all in one place. Customer service was responsive when I had an issue with one order. Could improve the search filters.",
+    rating: 4,
+  },
+  {
+    name: "Michael Peterson",
+    image: customer3,
+    text: "As a busy mom, I love that I can shop from multiple vendors in one checkout. The rewards program is great too - I've already earned enough points for free shipping on my next order!",
+    rating: 4.5,
+  },
+]
+
 export const companyInfo = [
   {
     title: "MultiMart",

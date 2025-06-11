@@ -72,7 +72,7 @@ const Deals = () => {
 
     return (
         <section className="lg:mx-[80px] px-4 sm:px-8 my-16 sm:my-32">
-            <div className="container @container mx-auto flex flex-col">
+            <div className="container mx-auto flex flex-col">
                 <div className="flex-1">
                     <h3 className="text-3xl font-bold text-center md:mb-12 mb-8">
                         Deals and Discounts
@@ -111,7 +111,7 @@ const Deals = () => {
                 </div>
 
                 {/*Discount Banner */}
-                <div className="@max-7xl:mx-10">
+                <div className="sm:w-[90%] mx-auto">
                     <div className=" flex sm:flex-row flex-col items-center justify-between gap-3 mx-auto w-full max-w-5xl mt-12 md:p-6 p-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl duration-100 hover:shadow-xl backdrop-blur-md border border-white/50 group">
                         <div className="flex flex-col max-md:items-center" >
                             <p className="px-3 py-1 mb-3 text-sm bg-purple-100 text-purple-700 font-medium rounded-full w-fit">Flash Sale</p>

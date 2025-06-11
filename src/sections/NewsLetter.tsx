@@ -4,9 +4,9 @@ import { gifts } from "@/assets"
 const NewsLetter = () => {
     return (
         <section className="lg:mx-[80px] my-16 sm:my-32">
-            <div className="container mx-auto p-4 ">
-                <div className="flex gap-16 max-w-6xl ">
-                    <div className=" flex-1 max-w-xl flex flex-col">
+            <div className="container mx-auto p-4">
+                <div className="flex gap-16 max-w-6xl mx-auto">
+                    <div className=" flex-1 max-w-xl flex flex-col ">
                         <p className='w-fit max-md:self-center px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4'>Limited Time Offer</p>
                         <h2 className='text-3xl max-md:text-center font-bold md:mb-4 mb-2'>
                             Get 15% Off Your First Purchase
