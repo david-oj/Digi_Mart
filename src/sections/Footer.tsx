@@ -7,9 +7,28 @@ const Footer = () => {
     <section className="lg:mx-[80px] px-4 md:mt-32 mt-16">
       <div className="container mx-auto">
         <div className="flex sm:gap-12 gap-8 flex-wrap">
-          {companyInfo.map((info) => (
-            <div key={info.title} className="flex-1">
-              <h3 className="text-2xl font-bold"> {info.title}</h3>
+          {companyInfo.map((info, id) => (
+            <div key={id} className="flex-1">
+              {/* DigiMart Logo */}
+              <div className="flex items-center gap-1">
+                <div className="size-8  bg-purple-600 rounded-lg flex justify-center items-center">
+                  <div className="size-6 bg-white rounded-xl flex justify-center items-center">
+                    <div className="rounded-lg flex mb-0.5 justify-center items-center">
+                      <span className="text-purple-600 font-semibold text-xl">
+                        D
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xl font-semibold text-purple-600">
+                  igi
+                </span>
+                {/* Vertival Bar */}
+                <div className="h-6 border border-purple-600" />
+                <span className="text-xl font-semibold text-blue-600 ">
+                  Mart
+                </span>
+              </div>
               <p className="mt-6 opacity-70 max-w-sm">{info.description}</p>
               {/* FIrst section */}
               <div className="flex sm:gap-4 gap-2 mt-4">

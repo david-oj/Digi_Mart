@@ -220,7 +220,6 @@ export const customerReviews = [
 
 export const companyInfo = [
   {
-    title: "MultiMart",
     description:
       "The one-stop marketplace for all your shopping needs with verified vendors and secure payments.",
     socialIcons: [
