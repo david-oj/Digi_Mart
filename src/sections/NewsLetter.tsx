@@ -18,7 +18,7 @@ const NewsLetter = () => {
                         </p>
 
                         <div className=" relative flex gap-2 md:h-14 h-13 items-center w-full max-w-lg max-md:m-auto  rounded-full backdrop-blur-md border border-white/50 bg-white/70">
-                            <input type="email" placeholder='Enter your email' className="px-4 h-full rounded-full flex-grow backdrop-blur-md border border-white/50 focus:ring-2 focus:outline-none focus:ring-purple-600/50 " />
+                            <input type="email" placeholder='Enter your email' className="px-4 h-full rounded-full flex-grow backdrop-blur-md focus:ring-2 focus:outline-none focus:ring-purple-600/50 " />
                             <Button className="absolute right-0.5 md:py-6 px-6 py-5.5 gradient backdrop-blur-md rounded-full transform duration-300 border border-white/50 hover:cursor-pointer hover:shadow-lg "> Subscribe</Button>
                         </div>
 

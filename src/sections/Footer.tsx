@@ -76,8 +76,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between mt-16 sm:pb-8 pb-4">
           <div className="max-md:text-center">
             <p>
-              {" "}
-              © {new Date().getFullYear()} MultiMart. All rights reserved.
+              © {new Date().getFullYear()} DigiMart. All rights reserved.
               Developed by{" "}
               <a
                 href="#"

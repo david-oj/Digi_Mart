@@ -1,10 +1,15 @@
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { fashionImg1, electronics } from "@/assets";
+import {
+  fashionImg1,
+  electronics,
+  customer1,
+  customer2,
+  customer3,
+} from "@/assets";
 import ShoppingBag from "@/assets/icons/shopping_bag.svg?react";
 import Payments from "@/assets/icons/payments.svg?react";
 import LocalShopping from "@/assets/icons/local_shipping.svg?react";
-
 
 const Hero = () => {
   return (
@@ -21,7 +26,7 @@ const Hero = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Discover and Shop <br className="block md:hidden" /> Across
+              Discover and Shop <br className="block" /> Across
               Multiple <br className="max-md:hidden max-sm:block" /> Brands
             </h1>
 
@@ -31,9 +36,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button className="button gradient">
-                Start Shopping
-              </Button>
+              <Button className="button gradient">Start Shopping</Button>
               <Button
                 variant="outline"
                 className=" button bg-white/50 hover:bg-white/70 "
@@ -44,11 +47,17 @@ const Hero = () => {
 
             <div className="flex items-center gap-4">
               <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
+                {[customer1, customer2, customer3].map((c, i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full border-2 border-white bg-gray-200"
-                  />
+                    className="w-8 h-8 rounded-full border-2 border-white bg-gray-200 overflow-hidden"
+                  >
+                    <img
+                      src={c}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 ))}
               </div>
               <div className="space-y-1">
@@ -68,9 +77,8 @@ const Hero = () => {
             </div>
           </div>
 
-
           {/* Image Card Section */}
-          <div className="relative  flex-1 h-[480px] flex justify-center md:justify-end items-start max-lg:scale-[0.85] @max-[375px]:scale-[0.70] ">
+          <div className="relative transform translate-x-[5%] flex-1 h-[480px] flex justify-center md:justify-end items-start max-lg:scale-[0.85] @max-[425px]:scale-[0.70] ">
             {/*floating icons */}
             <div className="absolute right-80 -top-15 z-20 w-14 h-14 rounded-full flex justify-center items-center  backdrop-blur-md shadow-lg border border-white/50 animate-bounce">
               <ShoppingBag className="text-purple-600 w-[24px] h-[24px]" />
@@ -81,7 +89,6 @@ const Hero = () => {
             <div className="absolute md:bottom-18 bottom-0 right-57 z-10 w-14 h-14 rounded-full flex justify-center items-center bg-white/40 backdrop-blur-md shadow-lg border border-white/50 ">
               <LocalShopping className="text-blue-600 w-[24px] h-[24px]" />
             </div>
-
 
             <div className=" relative w-[300px] h-[400px] left-[3rem]">
               {/* First Card */}
@@ -117,12 +124,9 @@ const Hero = () => {
                   <p>150+ Vendors</p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
   );
