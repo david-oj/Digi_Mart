@@ -80,7 +80,7 @@ const Hero = () => {
           {/* Image Card Section */}
           <div className="relative transform sm:-translate-x-[5%] translate-x-[5%] flex-1 h-[480px] flex justify-center md:justify-end items-end max-lg:scale-[0.85] @max-[425px]:scale-[0.70] ">
             {/*floating icons */}
-            <div className="absolute right-80 top-5 z-20 w-14 h-14 rounded-full flex justify-center items-center  backdrop-blur-md shadow-lg border border-white/50 animate-bounce">
+            <div className="absolute right-80 sm:top-5 -top-15 z-20 w-14 h-14 rounded-full flex justify-center items-center  backdrop-blur-md shadow-lg border border-white/50 animate-bounce">
               <ShoppingBag className="text-purple-600 w-[24px] h-[24px]" />
             </div>
             <div className="absolute top-39 -right-5 z-10  w-14 h-14 rounded-full flex justify-center items-center bg-white/30 backdrop-blur-sm shadow-lg border border-white/50 animate-pulse">
