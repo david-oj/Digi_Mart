@@ -9,7 +9,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header className="relative z-50 lg:mx-[80px] px-4 py-4 ">
+    <header id="header" className="relative z-50 lg:mx-[80px] px-4 py-4 ">
       <div className="container mx-auto">
         <div className="flex items-center relative justify-between">
           {/* DigiMart Logo */}

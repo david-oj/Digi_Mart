@@ -10,25 +10,27 @@ const Footer = () => {
           {companyInfo.map((info, id) => (
             <div key={id} className="flex-1">
               {/* DigiMart Logo */}
-              <div className="flex items-center gap-1">
-                <div className="size-8  bg-purple-600 rounded-lg flex justify-center items-center">
-                  <div className="size-6 bg-white rounded-xl flex justify-center items-center">
-                    <div className="rounded-lg flex mb-0.5 justify-center items-center">
-                      <span className="text-purple-600 font-semibold text-xl">
-                        D
-                      </span>
+              <a href="#header">
+                <div className="flex items-center gap-1">
+                  <div className="size-8  bg-purple-600 rounded-lg flex justify-center items-center">
+                    <div className="size-6 bg-white rounded-xl flex justify-center items-center">
+                      <div className="rounded-lg flex mb-0.5 justify-center items-center">
+                        <span className="text-purple-600 font-semibold text-xl">
+                          D
+                        </span>
+                      </div>
                     </div>
                   </div>
+                  <span className="text-xl font-semibold text-purple-600">
+                    igi
+                  </span>
+                  {/* Vertival Bar */}
+                  <div className="h-6 border border-purple-600" />
+                  <span className="text-xl font-semibold text-blue-600 ">
+                    Mart
+                  </span>
                 </div>
-                <span className="text-xl font-semibold text-purple-600">
-                  igi
-                </span>
-                {/* Vertival Bar */}
-                <div className="h-6 border border-purple-600" />
-                <span className="text-xl font-semibold text-blue-600 ">
-                  Mart
-                </span>
-              </div>
+              </a>
               <p className="mt-6 opacity-70 max-w-sm">{info.description}</p>
               {/* FIrst section */}
               <div className="flex sm:gap-4 gap-2 mt-4">
@@ -99,7 +101,7 @@ const Footer = () => {
               Developed by{" "}
               <a
                 href="#"
-                className="hover:text-purple-500 hover:underline transition-all"
+                className="hover:text-purple-500 hover:underline active:text-purple-500 active:underline transition-all"
               >
                 Protevon
               </a>{" "}

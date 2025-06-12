@@ -201,7 +201,7 @@ export const customerReviews = [
   {
     name: "Sarah Williams",
     image: customer1,
-    text: "I was skeptical about a multi-vendor platform, but MultiMart exceeded my expectations. The variety of products and vendors is impressive, and the shipping was faster than expected!",
+    text: "I was always skeptical about multi-vendor platforms, but DigiMart exceeded my expectations. The variety of products and vendors is impressive, and the shipping was faster than expected!",
     rating: 5,
   },
   {
