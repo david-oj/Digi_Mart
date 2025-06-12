@@ -2,19 +2,39 @@ import { useState } from "react";
 import { Search, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/constants/index";
-import Menu from "@/assets/icons/menu.svg?react"
-import Close from "@/assets/icons/close.svg?react"
+import Menu from "@/assets/icons/menu.svg?react";
+import Close from "@/assets/icons/close.svg?react";
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
 
   return (
     <header className="relative z-50 lg:mx-[80px] px-4 py-4 ">
       <div className="container mx-auto">
         <div className="flex items-center relative justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-purple-600 rounded-lg"></div>
-            <span className="text-xl font-semibold">MultiMart</span>
+          {/* DigiMart Logo */}
+          <div className="flex items-center gap-1">
+            <div className="size-8  bg-purple-600 rounded-lg flex justify-center items-center">
+              <div className="size-6 bg-white rounded-xl flex justify-center items-center">
+                <div className="rounded-lg flex justify-center items-center">
+                  <span className="text-purple-600 font-semibold text-xl">
+                    D
+                  </span>
+                </div>
+              </div>
+            </div>
+            <span className="text-xl font-semibold text-purple-600">igi</span>
+            {/* Vertival Bar */}
+            <div className="h-6 border border-purple-600" />
+            <span className="text-xl font-semibold text-blue-600 ">Mart</span>
+            <span className="text-xl font-semibold text-purple-600">.</span>
+            {/* <span className="text-xl font-semibold text-blue-600">i</span>
+            <span className="text-xl font-semibold text-purple-600">g</span>
+            <span className="text-xl font-semibold text-blue-600">i</span>
+            <span className="text-xl font-semibold text-purple-600">M</span>
+            <span className="text-xl font-semibold text-blue-600">a</span>
+            <span className="text-xl font-semibold text-purple-600">r</span>
+            <span className="text-xl font-semibold text-blue-600">t</span> */}
           </div>
 
           {/* Desktop nav  */}
@@ -32,45 +52,79 @@ const Header = () => {
 
           {/* desktop nav icons */}
           <div className="md:flex hidden items-center gap-4">
-            <Button variant="ghost" size="icon" className="hover:bg-pink-100 rounded-full">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:bg-pink-100 rounded-full"
+            >
               <Search className="w-5 h-5 " />
             </Button>
-            <Button variant="ghost" size="icon" className="hover:bg-pink-100 rounded-full">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:bg-pink-100 rounded-full"
+            >
               <ShoppingCart className="w-5 h-5 hover:text-purple-500" />
             </Button>
-            <Button variant="ghost" className="opacity-70 hover:opacity-100 transition-all border border-transparent hover:border-white/50 hover:text-purple-500 hover:bg-pink-200">Sign In</Button>
+            <Button
+              variant="ghost"
+              className="opacity-70 hover:opacity-100 transition-all border border-transparent hover:border-white/50 hover:text-purple-500 hover:bg-pink-200"
+            >
+              Sign In
+            </Button>
           </div>
 
           {/* mobile nav  */}
           <div className=" md:hidden z-50 relative">
-            <button className="" onClick={() => setToggle((prev) => !prev)} >
+            <button className="" onClick={() => setToggle((prev) => !prev)}>
               {toggle ? <Close className="text-gray-800 " /> : <Menu />}
             </button>
 
-            {toggle && <div className="sidebar flex absolute right-[0] flex-col px-8 py-4 rounded-lg  backdrop-blur-md bg-white/30 border border-white/50 ">
-              {navLinks.map((link, index) => (
-                <li key={link.label} className={`${index !== navLinks.length - 1 ? "mb-4" : "mb-2"} list-none transition-all hover:text-purple-500 opacity-70 hover:opacity-100`}><a href={link.href}>{link.label} </a></li>
-              ))}
+            {toggle && (
+              <div className="sidebar flex absolute right-[0] flex-col px-8 py-4 rounded-lg  backdrop-blur-md bg-white/30 border border-white/50 ">
+                {navLinks.map((link, index) => (
+                  <li
+                    key={link.label}
+                    className={`${
+                      index !== navLinks.length - 1 ? "mb-4" : "mb-2"
+                    } list-none transition-all hover:text-purple-500 opacity-70 hover:opacity-100`}
+                  >
+                    <a href={link.href}>{link.label} </a>
+                  </li>
+                ))}
 
-              {/* mobile nav icons */}
-              <div className="flex mb-1">
-                <a href="#"><Button variant="ghost" size="icon" className=" hover:text-purple-500 hover:bg-pink-100 rounded-full">
-                  <Search className="w-5 h-5" />
-                </Button></a>
+                {/* mobile nav icons */}
+                <div className="flex mb-1">
+                  <a href="#">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className=" hover:text-purple-500 hover:bg-pink-100 rounded-full"
+                    >
+                      <Search className="w-5 h-5" />
+                    </Button>
+                  </a>
+                  <a href="#">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className=" hover:text-purple-500 hover:bg-pink-100 rounded-full"
+                    >
+                      <ShoppingCart className="w-5 h-5" />
+                    </Button>
+                  </a>
+                </div>
                 <a href="#">
-                  <Button variant="ghost" size="icon" className=" hover:text-purple-500 hover:bg-pink-100 rounded-full">
-                    <ShoppingCart className="w-5 h-5" />
+                  <Button
+                    variant="outline"
+                    className="hover:bg-pink-100 opacity-70 hover:opacity-100 hover:text-purple-500 border-2 border-white/30 hover:border-white/40"
+                  >
+                    Sign In
                   </Button>
                 </a>
               </div>
-              <a href="#">
-                <Button variant="outline" className="hover:bg-pink-100 opacity-70 hover:opacity-100 hover:text-purple-500 border-2 border-white/30 hover:border-white/40">Sign In</Button>
-              </a>
-
-            </div>
-            }
+            )}
           </div>
-
         </div>
       </div>
     </header>
