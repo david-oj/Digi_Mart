@@ -40,6 +40,10 @@ const Deals = () => {
     }, [targetTime]);
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    
+    useEffect(() => {
+        resetCountdown(hours, minutes, seconds)
+    }, []);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
