@@ -26,8 +26,8 @@ const Hero = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Discover and Shop <br className="block" /> Across
-              Multiple <br className="max-md:hidden max-sm:block" /> Brands
+              Discover and Shop <br className="block" /> Across Multiple{" "}
+              <br className="max-md:hidden max-sm:block" /> Brands
             </h1>
 
             <p className="text-lg text-gray-600 max-w-lg">
@@ -78,9 +78,9 @@ const Hero = () => {
           </div>
 
           {/* Image Card Section */}
-          <div className="relative transform translate-x-[5%] flex-1 h-[480px] flex justify-center md:justify-end items-start max-lg:scale-[0.85] @max-[425px]:scale-[0.70] ">
+          <div className="relative transform sm:-translate-x-[5%] translate-x-[5%] flex-1 h-[480px] flex justify-center md:justify-end items-end max-lg:scale-[0.85] @max-[425px]:scale-[0.70] ">
             {/*floating icons */}
-            <div className="absolute right-80 -top-15 z-20 w-14 h-14 rounded-full flex justify-center items-center  backdrop-blur-md shadow-lg border border-white/50 animate-bounce">
+            <div className="absolute right-80 top-5 z-20 w-14 h-14 rounded-full flex justify-center items-center  backdrop-blur-md shadow-lg border border-white/50 animate-bounce">
               <ShoppingBag className="text-purple-600 w-[24px] h-[24px]" />
             </div>
             <div className="absolute top-39 -right-5 z-10  w-14 h-14 rounded-full flex justify-center items-center bg-white/30 backdrop-blur-sm shadow-lg border border-white/50 animate-pulse">
@@ -100,6 +100,7 @@ const Hero = () => {
                     className="w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"
+                    fetchPriority="high"
                   />
                 </div>
                 <div className="my-2 px-4">
@@ -117,6 +118,7 @@ const Hero = () => {
                     className="w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"
+                    fetchPriority="high"
                   />
                 </div>
                 <div className="my-2 px-4">

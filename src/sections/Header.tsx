@@ -16,7 +16,7 @@ const Header = () => {
           <div className="flex items-center gap-1">
             <div className="size-8  bg-purple-600 rounded-lg flex justify-center items-center">
               <div className="size-6 bg-white rounded-xl flex justify-center items-center">
-                <div className="rounded-lg flex justify-center items-center">
+                <div className="rounded-lg flex mb-0.5 justify-center items-center">
                   <span className="text-purple-600 font-semibold text-xl">
                     D
                   </span>
@@ -27,14 +27,6 @@ const Header = () => {
             {/* Vertival Bar */}
             <div className="h-6 border border-purple-600" />
             <span className="text-xl font-semibold text-blue-600 ">Mart</span>
-            <span className="text-xl font-semibold text-purple-600">.</span>
-            {/* <span className="text-xl font-semibold text-blue-600">i</span>
-            <span className="text-xl font-semibold text-purple-600">g</span>
-            <span className="text-xl font-semibold text-blue-600">i</span>
-            <span className="text-xl font-semibold text-purple-600">M</span>
-            <span className="text-xl font-semibold text-blue-600">a</span>
-            <span className="text-xl font-semibold text-purple-600">r</span>
-            <span className="text-xl font-semibold text-blue-600">t</span> */}
           </div>
 
           {/* Desktop nav  */}

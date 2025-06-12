@@ -54,7 +54,7 @@ const Footer = () => {
                   <div className=" flex sm:flex-col flex-row gap-2 mt-4">
                     {footer.images.map((image) => (
                       <a href={image.href}>
-                        <div className="flex-1 max-w-[150px]">
+                        <div className="flex-1 max-w-[150px] bg-amber-100">
                           <img
                             src={image.src}
                             alt={image.alt}

@@ -15,7 +15,7 @@ const Trusted = () => {
       <div className="flex justify-center items-center flex-wrap  gap-12">
         <Apple className="brands" />
         <Nike className="brands " />
-        <Samsung className="brands hover:text-samsung" />
+        <Samsung className="brands hover:text-samsung active:text-samsung" />
         <Google className="brands " />
         <Microsoft className="brands" />
         <Amazon className="brands" />

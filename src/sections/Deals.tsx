@@ -88,11 +88,11 @@ const Deals = () => {
                                 <div className="h-48 overflow-hidden relative">
                                     <img src={deal.img}
                                         alt={deal.title}
-                                        className="object-cover h-full w-full transform transition-all duration-300 group-hover:scale-110"
+                                        className="object-cover h-full w-full transform transition-all duration-300 group-hover:scale-110 group-active:scale-110"
                                         loading="lazy"
                                         decoding="async"
                                     />
-                                    <div className="flex items-end absolute overflow-hidden inset-0 bg-gradient-to-t from-black/60 to-transparent duration-300  opacity-0 group-hover:opacity-100">
+                                    <div className="flex items-end absolute overflow-hidden inset-0 bg-gradient-to-t from-black/60 to-transparent duration-300  opacity-0 group-hover:opacity-100 group-active:opacity-100">
                                         <p className={`${deal.highlightColor} text-xs w-fit py-1 px-2 m-4 rounded-full text-white `}>{deal.highlight}</p>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@ const Deals = () => {
                                         <p className="text-purple-700 font-bold text-lg">{deal.discountPrice}</p>
                                         <p className="line-through text-sm opacity-70">{deal.price}</p>
                                     </div>
-                                    <p className="flex items-center gap-2 text-purple-600 group-hover:underline">Shop Now <span className="transition-all group-hover:translate-x-1"><deal.Icon /></span> </p>
+                                    <p className="flex items-center gap-2 text-purple-600 group-hover:underline group-active:underline">Shop Now <span className="transition-all group-hover:translate-x-1 group-active:translate-x-1"><deal.Icon /></span> </p>
                                 </div>
                             </div>
                         ))}
@@ -112,7 +112,7 @@ const Deals = () => {
 
                 {/*Discount Banner */}
                 <div className="sm:w-[90%] mx-auto">
-                    <div className=" flex sm:flex-row flex-col items-center justify-between gap-3 mx-auto w-full max-w-5xl mt-12 md:p-6 p-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl duration-100 hover:shadow-xl backdrop-blur-md border border-white/50 group">
+                    <div className=" flex sm:flex-row flex-col items-center justify-between gap-3 mx-auto w-full max-w-5xl mt-12 md:p-6 p-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl duration-100 hover:shadow-xl active:shadow-xl backdrop-blur-md border border-white/50 group">
                         <div className="flex flex-col max-md:items-center" >
                             <p className="px-3 py-1 mb-3 text-sm bg-purple-100 text-purple-700 font-medium rounded-full w-fit">Flash Sale</p>
                             <h3 className='text-2xl font-bold mb-2 max-[49.8rem]:text-center'>
@@ -122,7 +122,7 @@ const Deals = () => {
                                 Use code <span className='font-bold'>WEEKEND15</span> at
                                 checkout • Ends in 48 hours
                             </p>
-                            <Button className="button gradient md:self-start group-hover:-translate-y-1"> Shop the Sale <span className="transition-transform group-hover:translate-x-1"> <MdOutlineArrowForward /> </span></Button>
+                            <Button className="button gradient md:self-start group-hover:-translate-y-1 group-active:-translate-y-1"> Shop the Sale <span className="transition-transform group-hover:translate-x-1 group-active:translate-x-1"> <MdOutlineArrowForward /> </span></Button>
                         </div>
 
                         {/* Time Display UI */}

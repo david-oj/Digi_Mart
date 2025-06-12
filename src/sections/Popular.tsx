@@ -15,13 +15,13 @@ const Popular = () => {
                 <div className="sm:h-48 h-34 relative overflow-hidden">
                   <img src={popular.img}
                     alt={popular.title}
-                    className="h-full w-full object-cover transform  group-hover:scale-110 duration-300 transition-all"
+                    className="h-full w-full object-cover transform  group-hover:scale-110  group-active:scale-110 duration-300 transition-all"
                     loading="lazy"
                     decoding="async"
                   />
 
                   {/* overlay */}
-                  <div className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 duration-300 transition-all  bg-gradient-to-t from-black/60 to-transparent">
+                  <div className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 group-active:opacity-100 duration-300 transition-all  bg-gradient-to-t from-black/60 to-transparent">
                     <div className={`px-2 py-1 m-4 rounded-full text-white text-xs ${popular.productsColor}`}>
                       <p>{popular.products}</p>
                     </div>
@@ -34,7 +34,7 @@ const Popular = () => {
                 <div className="p-4 flex flex-col flex-grow">
                   <h3 className="font-medium sm:mb-1">{popular.title}</h3>
                   <p className="opacity-70 sm:mb-3 mb-2 flex-grow">{popular.description}</p>
-                  <a className="flex items-center gap-2 text-purple-600 group-hover:underline">Explore <span className="transition-transform group-hover:translate-x-1 "><popular.Icon /></span></a>
+                  <a className="flex items-center gap-2 text-purple-600 group-hover:underline group-active:underline">Explore <span className="transition-transform group-hover:translate-x-1 group-active:translate-x-1 "><popular.Icon /></span></a>
                 </div>
               </div>
             ))}

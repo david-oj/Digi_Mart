@@ -16,7 +16,7 @@ const Featured = () => {
           {categories.map((category) => (
             <div
               key={category.title}
-              className="md:p-4 p-1 flex flex-col items-center border border-white/50 rounded-3xl backdrop-blur-md bg-white/30 hover:bg-white/50 transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              className="md:p-4 p-1 flex flex-col items-center border border-white/50 rounded-3xl backdrop-blur-md bg-white/30 hover:bg-white/50 transform hover:-translate-y-1 hover:shadow-lg active:-translate-y-1 active:shadow-lg transition-all duration-300"
             >
               <category.Icon className={`w-9 h-9 mb-2 ${category.iconColor}`} />
               <p>{category.title}</p>
@@ -26,7 +26,7 @@ const Featured = () => {
 
         <Button className="self-center mt-10 button gradient">
           View All Categories
-          <span className="">
+          <span>
             <MdOutlineArrowForward />
           </span>
         </Button>
