@@ -9,14 +9,14 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header id="header" className="relative z-50 lg:mx-[80px] px-4 py-4 ">
+    <header id="home" className="relative z-50 lg:mx-[80px] px-4 py-4 ">
       <div className="container mx-auto">
         <div className="flex items-center relative justify-between">
           {/* DigiMart Logo */}
           <div className="flex items-center gap-1">
             <div className="size-8  bg-purple-600 rounded-lg flex justify-center items-center">
               <div className="size-6 bg-white rounded-xl flex justify-center items-center">
-                <div className="rounded-lg flex mb-0.5 justify-center items-center">
+                <div className="rounded-lg flex justify-center items-center">
                   <span className="text-purple-600 font-semibold text-xl">
                     D
                   </span>
