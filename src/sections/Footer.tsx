@@ -10,7 +10,7 @@ const Footer = () => {
           {companyInfo.map((info, id) => (
             <div key={id} className="flex-1">
               {/* DigiMart Logo */}
-              <a href="#header">
+              <a href="#home">
                 <div className="flex items-center gap-1">
                   <div className="size-8  bg-purple-600 rounded-lg flex justify-center items-center">
                     <div className="size-6 bg-white rounded-xl flex justify-center items-center">
