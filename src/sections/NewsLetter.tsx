@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { MdOutlineLock } from "react-icons/md"
 import { gifts } from "@/assets"
+import LazyImage from "@/components/LazyImage"
 const NewsLetter = () => {
     return (
         <section className="lg:mx-[80px] my-16 sm:my-32">
@@ -30,11 +31,10 @@ const NewsLetter = () => {
                     </div>
 
                     <div className="flex-1 hidden md:block overflow-hidden transform transition duration-300 rotate-[3deg] hover:rotate-0 rounded-3xl ">
-                        <img src={gifts}
+                        <LazyImage src={gifts}
                             alt="sale"
                             className="w-full h-full "
-                            loading="lazy"
-                            decoding="async"
+                            priority="low"
                         />
                     </div>
                 </div>

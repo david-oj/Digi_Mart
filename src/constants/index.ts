@@ -3,6 +3,13 @@ import Verified from "@/assets/icons/verified.svg?react";
 import Payments from "@/assets/icons/payments.svg?react";
 import Footprint from "@/assets/icons/footprint.svg?react";
 import Bed from "@/assets/icons/bed.svg?react";
+import Apple from "@/assets/icons/apple.svg?react";
+import Nike from "@/assets/icons/nike.svg?react";
+import Samsung from "@/assets/icons/samsung.svg?react";
+import Google from "@/assets/icons/google.svg?react";
+import Microsoft from "@/assets/icons/microsoft.svg?react";
+import Amazon from "@/assets/icons/amazon.svg?react";
+
 import { facebook, instagram, linkedin, twitter } from "@/assets/icons";
 import {
   MdOutlineSmartphone,
@@ -48,6 +55,39 @@ export const navLinks = [
   {
     label: "Contact",
     href: "#",
+  },
+];
+
+export const trustedBrands = [
+  {
+    id: "1",
+    name: "Apple",
+    Icon: Apple,
+  },
+  {
+    id: "2",
+    name: "Nike",
+    Icon: Nike,
+  },
+  {
+  id: "3",
+  name: "Samsung",
+  Icon: Samsung,
+},
+  {
+    id: "4",
+    name: "Google",
+    Icon: Google,
+  },
+  {
+    id: "5",
+    name: "Microsoft",
+    Icon: Microsoft,
+  },
+  {
+    id: "6",
+    name: "Amazon",
+    Icon: Amazon,
   },
 ];
 
@@ -216,7 +256,7 @@ export const customerReviews = [
     text: "As a busy mom, I love that I can shop from multiple vendors in one checkout. The rewards program is great too - I've already earned enough points for free shipping on my next order!",
     rating: 4.5,
   },
-]
+];
 
 export const companyInfo = [
   {
@@ -259,12 +299,12 @@ export const footerLinks = [
     images: [
       {
         alt: "Google Play Store",
-        src: googleStore, 
+        src: googleStore,
         href: "#",
       },
       {
         alt: "apple Store",
-        src: appleStore, 
+        src: appleStore,
         href: "#",
       },
     ],

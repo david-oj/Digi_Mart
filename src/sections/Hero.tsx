@@ -10,6 +10,7 @@ import {
 import ShoppingBag from "@/assets/icons/shopping_bag.svg?react";
 import Payments from "@/assets/icons/payments.svg?react";
 import LocalShopping from "@/assets/icons/local_shipping.svg?react";
+import LazyImage from "@/components/LazyImage";
 
 const Hero = () => {
   return (
@@ -94,13 +95,12 @@ const Hero = () => {
               {/* First Card */}
               <div className="absolute top-0 right-35 h-[310px] w-[270px] hover:z-10 transition-all hover:rotate-0 duration-600 bg-white/30 border border-white/50 backdrop-blur-md overflow-hidden rounded-4xl flex flex-col transform rotate-[6deg] shadow-lg ">
                 <div className="h-[75%] ">
-                  <img
+                  <LazyImage
                     src={fashionImg1}
                     alt="fashionimg"
                     className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    fetchPriority="high"
+                    loading="eager"
+                    priority="high"
                   />
                 </div>
                 <div className="my-2 px-4">
@@ -112,13 +112,12 @@ const Hero = () => {
               {/* Second Card */}
               <div className="absolute top-30 h-[310px] w-[270px] transition-all hover:rotate-0 duration-600 bg-white/30 border border-white/50 backdrop-blur-md overflow-hidden rounded-4xl flex flex-col transform rotate-[-6deg] shadow-lg z-0 ">
                 <div className="h-[75%] ">
-                  <img
+                  <LazyImage
                     src={electronics}
                     alt="fashionimg"
                     className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    fetchPriority="high"
+                    loading="eager"
+                    priority="high"
                   />
                 </div>
                 <div className="my-2 px-4">

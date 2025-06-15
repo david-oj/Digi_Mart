@@ -1,6 +1,7 @@
 import { popularCategories } from "@/constants"
 import { Button } from "@/components/ui/button"
 import { MdOutlineArrowForward } from "react-icons/md"
+import LazyImage from "@/components/LazyImage"
 const Popular = () => {
   return (
     <section className="lg:mx-[80px] px-4 my-16 sm:my-32 relative">
@@ -13,11 +14,9 @@ const Popular = () => {
               <div className=" flex h-full flex-col max-w-71 sm:min-w-63 min- card overflow-hidden group " key={popular.title}>
                 {/* image & overlay div */}
                 <div className="sm:h-48 h-34 relative overflow-hidden">
-                  <img src={popular.img}
+                  <LazyImage src={popular.img}
                     alt={popular.title}
                     className="h-full w-full object-cover transform  group-hover:scale-110  group-active:scale-110 duration-300 transition-all"
-                    loading="lazy"
-                    decoding="async"
                   />
 
                   {/* overlay */}

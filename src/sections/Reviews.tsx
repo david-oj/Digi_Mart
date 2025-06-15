@@ -1,5 +1,6 @@
 import { customerReviews } from "@/constants";
 import RatingStars from "@/components/RatingStars";
+import LazyImage from "@/components/LazyImage";
 
 const Reviews = () => {
   return (
@@ -18,10 +19,11 @@ const Reviews = () => {
             >
               <div className="flex gap-4">
                 <div className="size-12 rounded-full overflow-hidden">
-                  <img
+                  <LazyImage
                     src={review.image}
                     alt="customer-review-image"
                     className="w-full h-full object-cover"
+                    priority="low"
                   />
                 </div>
                 <div className="flex flex-col items-start">

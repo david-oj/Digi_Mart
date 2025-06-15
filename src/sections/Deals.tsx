@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from "react";
 import { deals } from "@/constants";
 import { Button } from "@/components/ui/button";
 import { MdOutlineArrowForward } from "react-icons/md";
+import LazyImage from "@/components/LazyImage";
 
 const Deals = () => {
     const hours = 30;
@@ -90,11 +91,9 @@ const Deals = () => {
                                     <p className="text-white text-xs">{deal.discount}</p>
                                 </div>
                                 <div className="h-48 overflow-hidden relative">
-                                    <img src={deal.img}
+                                    <LazyImage src={deal.img}
                                         alt={deal.title}
                                         className="object-cover h-full w-full transform transition-all duration-300 group-hover:scale-110 group-active:scale-110"
-                                        loading="lazy"
-                                        decoding="async"
                                     />
                                     <div className="flex items-end absolute overflow-hidden inset-0 bg-gradient-to-t from-black/60 to-transparent duration-300  opacity-0 group-hover:opacity-100 group-active:opacity-100">
                                         <p className={`${deal.highlightColor} text-xs w-fit py-1 px-2 m-4 rounded-full text-white `}>{deal.highlight}</p>

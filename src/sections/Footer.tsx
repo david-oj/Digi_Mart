@@ -1,3 +1,4 @@
+import LazyImage from "@/components/LazyImage";
 import { footerLinks } from "@/constants";
 import { companyInfo } from "@/constants";
 import { bottomLinks } from "@/constants";
@@ -40,10 +41,11 @@ const Footer = () => {
                       className="sm:w-10 sm:h-10 h-8 w-8 rounded-full flex items-center justify-center bg-white/80 backdrop-blur-md border border-white/50 hover:cursor-pointer"
                       key={icon.alt}
                     >
-                      <img
+                      <LazyImage
                         src={icon.icon}
                         alt={icon.alt}
                         className="sm:w-6 sm:h-6 w-5 h-5"
+                        priority="low"
                       />
                     </div>
                   </a>
