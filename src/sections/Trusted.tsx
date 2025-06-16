@@ -1,10 +1,5 @@
-import Apple from "@/assets/icons/apple.svg?react";
-// Nike, Samsung, Google, Microsoft, Amazon
-import Nike from "@/assets/icons/nike.svg?react";
-import Samsung from "@/assets/icons/samsung.svg?react";
-import Google from "@/assets/icons/google.svg?react";
-import Microsoft from "@/assets/icons/microsoft.svg?react";
-import Amazon from "@/assets/icons/amazon.svg?react";
+import { trustedBrands } from "@/constants";
+import { Fade } from "react-awesome-reveal";
 
 const Trusted = () => {
   return (
@@ -13,12 +8,19 @@ const Trusted = () => {
         Trusted by 500+ Leading Brands
       </h2>
       <div className="flex justify-center items-center flex-wrap  gap-12">
-        <Apple className="brands" />
-        <Nike className="brands " />
-        <Samsung className="brands hover:text-samsung active:text-samsung" />
-        <Google className="brands " />
-        <Microsoft className="brands" />
-        <Amazon className="brands" />
+        {trustedBrands.map((brand, i) => {
+          return (
+            <Fade
+              direction="up"
+              key={brand.id}
+              fraction={0.8}
+              delay={100 * i}
+              triggerOnce
+            >
+              <brand.Icon className="brands" />
+            </Fade>
+          );
+        })}
       </div>
     </section>
   );
