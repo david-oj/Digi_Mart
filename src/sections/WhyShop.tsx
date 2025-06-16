@@ -16,7 +16,7 @@ const WhyShop = () => {
               key={feature.id}
               className="flex-1 min-w-[340px] backdrop-blur-md bg-white/40 rounded-xl p-6 border border-white/80 hover:shadow-lg hover:bg-white/50 transform hover:-translate-y-2 transition-all duration-300"
               delay={i * 100}
-              fraction={0.4}
+              fraction={0.5}
               triggerOnce
             >
               <div>

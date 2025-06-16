@@ -16,7 +16,7 @@ const Popular = () => {
 
           <div className="md:flex grid grid-cols-2 gap-4 sm:gap-8 justify-center items-center flex-wrap">
             {popularCategories.map((popular, i) => (
-              <Fade direction="left" delay={i * 100} fraction={0.2} triggerOnce>
+              <Fade direction="left" delay={i * 100} triggerOnce>
                 <div
                   className=" flex h-full flex-col max-w-71 sm:min-w-63 min- card overflow-hidden group "
                   key={popular.title}
@@ -56,14 +56,8 @@ const Popular = () => {
               </Fade>
             ))}
           </div>
-          <Fade direction="up" delay={400} triggerOnce>
-            <Button className="mt-10 text-black bg-t-white button">
-              View all categories
-              <span>
-                <MdOutlineArrowForward />
-              </span>
-            </Button>
-          </Fade>
+          <Button className="mt-10 text-black bg-t-white button"> View all categories <span> <MdOutlineArrowForward /> </span> </Button>
+
         </div>
       </div>
     </section>

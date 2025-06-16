@@ -94,7 +94,7 @@ const Deals = () => {
               <Flip
                 direction="vertical"
                 delay={index * 100}
-                fraction={0.3}
+                fraction={0.4}
                 triggerOnce
                 key={index}
                 className="flex-1 card overflow-hidden group relative min-w-63 "
