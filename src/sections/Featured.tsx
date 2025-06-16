@@ -1,6 +1,7 @@
 import { categories } from "@/constants";
 import { Button } from "@/components/ui/button";
 import { MdOutlineArrowForward } from "react-icons/md";
+import { Fade } from "react-awesome-reveal";
 
 const Featured = () => {
   return (
@@ -13,23 +14,33 @@ const Featured = () => {
         </h3>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6">
-          {categories.map((category) => (
-            <div
-              key={category.title}
-              className="md:p-4 p-1 flex flex-col items-center border border-white/50 rounded-3xl backdrop-blur-md bg-white/30 hover:bg-white/50 transform hover:-translate-y-1 hover:shadow-lg active:-translate-y-1 active:shadow-lg transition-all duration-300"
-            >
-              <category.Icon className={`w-9 h-9 mb-2 ${category.iconColor}`} />
-              <p>{category.title}</p>
-            </div>
+          {categories.map((category, i) => (
+            <Fade direction="up" delay={100 * i} triggerOnce>
+              <div
+                key={category.title}
+                className="md:p-4 p-1 flex flex-col items-center border border-white/50 rounded-3xl backdrop-blur-md bg-white/30 hover:bg-white/50 transform hover:-translate-y-1 hover:shadow-lg active:-translate-y-1 active:shadow-lg transition-all duration-300"
+              >
+                <category.Icon
+                  className={`w-9 h-9 mb-2 ${category.iconColor}`}
+                />
+                <p>{category.title}</p>
+              </div>
+            </Fade>
           ))}
         </div>
-
-        <Button className="self-center mt-10 button gradient">
-          View All Categories
-          <span>
-            <MdOutlineArrowForward />
-          </span>
-        </Button>
+        <Fade
+          direction="up"
+          delay={800}
+          triggerOnce
+          className="self-center mt-10"
+        >
+          <Button className="button gradient">
+            View All Categories
+            <span>
+              <MdOutlineArrowForward />
+            </span>
+          </Button>
+        </Fade>
       </div>
     </section>
   );

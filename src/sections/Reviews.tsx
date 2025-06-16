@@ -1,6 +1,7 @@
 import { customerReviews } from "@/constants";
 import RatingStars from "@/components/RatingStars";
 import LazyImage from "@/components/LazyImage";
+import { Zoom } from "react-awesome-reveal";
 
 const Reviews = () => {
   return (
@@ -13,27 +14,32 @@ const Reviews = () => {
         </h3>
         <div className="flex gap-4 flex-wrap max-sm:justify-center">
           {customerReviews.map((review, index) => (
-            <div
+            <Zoom
               className="flex-1 min-w-[282px] max-sm:max-w-[396px]  transform hover:-translate-y-2 transition duration-200 p-8 space-y-4 border border-white/50 rounded-2xl backdrop-blur-md bg-white/30"
               key={index}
+              direction="right"
+              delay={index * 80}
+              triggerOnce
             >
-              <div className="flex gap-4">
-                <div className="size-12 rounded-full overflow-hidden">
-                  <LazyImage
-                    src={review.image}
-                    alt="customer-review-image"
-                    className="w-full h-full object-cover"
-                    priority="low"
-                  />
+              <div>
+                <div className="flex gap-4">
+                  <div className="size-12 rounded-full overflow-hidden">
+                    <LazyImage
+                      src={review.image}
+                      alt="customer-review-image"
+                      className="w-full h-full object-cover"
+                      priority="low"
+                    />
+                  </div>
+                  <div className="flex flex-col items-start">
+                    <span className="text-xl text-bold">{review.name}</span>
+                    <RatingStars rating={review.rating} />
+                  </div>
                 </div>
-                <div className="flex flex-col items-start">
-                  <span className="text-xl text-bold">{review.name}</span>
-                  <RatingStars rating={review.rating} />
-                </div>
+                <p className="text-base">{review.text}</p>
+                <div className=""></div>
               </div>
-              <p className="text-base">{review.text}</p>
-              <div className=""></div>
-            </div>
+            </Zoom>
           ))}
         </div>
       </div>
