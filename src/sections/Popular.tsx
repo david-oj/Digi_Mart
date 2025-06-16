@@ -56,14 +56,8 @@ const Popular = () => {
               </Fade>
             ))}
           </div>
-          <Fade direction="up" delay={400} triggerOnce>
-            <Button className="mt-10 text-black bg-t-white button">
-              View all categories
-              <span>
-                <MdOutlineArrowForward />
-              </span>
-            </Button>
-          </Fade>
+          <Button className="mt-10 text-black bg-t-white button"> View all categories <span> <MdOutlineArrowForward /> </span> </Button>
+
         </div>
       </div>
     </section>
