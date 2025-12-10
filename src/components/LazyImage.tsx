@@ -5,7 +5,7 @@ interface LazyImageProps {
   alt: string;
   loading?: "eager" | "lazy" | undefined;
   decoding?: "async" | "auto" | "sync" | undefined;
-  priority?: "high" | "low" | "auto";
+  priority?: "high" | "low" | "auto" | undefined;
   className?: string;
 }
 
