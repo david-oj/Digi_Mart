@@ -77,7 +77,7 @@ const Header = () => {
               </button>
 
               {toggle && (
-                <div className="sidebar flex absolute right-[0] flex-col px-8 py-4 rounded-lg  backdrop-blur-md bg-white/30 border border-white/50 ">
+                <div className="sidebar flex absolute right-0 flex-col px-8 py-4 rounded-lg  backdrop-blur-md bg-white/30 border border-white/50 ">
                   {navLinks.map((link, index) => (
                     <li
                       key={link.label}
